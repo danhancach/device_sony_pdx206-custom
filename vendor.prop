@@ -205,6 +205,7 @@ vendor.gatekeeper.disable_spu=true
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
+debug.gralloc.enable_fb_ubwc=1
 debug.sf.latch_unsignaled=0
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.enable_gl_backpressure=1
