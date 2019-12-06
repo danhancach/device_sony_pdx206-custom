@@ -30,6 +30,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
