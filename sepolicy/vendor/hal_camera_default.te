@@ -36,3 +36,5 @@ allow hal_camera_default somc_thermal_prop:file { read getattr map open };
 allow hal_camera_default vendor_camera_sensor_prop:property_service { set };
 allow hal_camera_default vendor_hal_qspmhal_hwservice:hwservice_manager { find };
 allow hal_camera_default vendor_hal_qspmhal_default:binder { call };
+
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
