@@ -19,4 +19,7 @@ type sysfs_sects, fs_type, sysfs_type;
 type sysfs_tsp, fs_type, sysfs_type;
 type sysfs_dp, fs_type, sysfs_type;
 
+type audio_socket, file_type;
+type public_adsprpcd_file, file_type;
+
 type vendor_debugfs_wlan, sysfs_type, fs_type;
