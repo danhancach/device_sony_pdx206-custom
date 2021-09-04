@@ -522,5 +522,12 @@
          fading edges is prohibitively expensive on most GPU's. -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
 
+    <!-- Disable rounded corners -->
+    <dimen name="config_dialogCornerRadius">0.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">0.0dip</dimen>
+    <dimen name="rounded_corner_radius">0dp</dimen>
+    <dimen name="config_progressBarCornerRadius">0.0dip</dimen>
+    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
+
 </resources>
 
