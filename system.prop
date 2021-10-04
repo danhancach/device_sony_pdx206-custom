@@ -75,3 +75,6 @@ ro.vendor.qti.va_aosp.support=1
 
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
+
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
