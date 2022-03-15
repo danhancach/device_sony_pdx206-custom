@@ -274,6 +274,9 @@ persist.vendor.sensors.allow_non_default_discovery=true
 # Touch
 ro.vendor.display.low_touch_rate=false
 
+# Telephony
+telephony.active_modems.max_count=2
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
