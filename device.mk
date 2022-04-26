@@ -139,6 +139,8 @@ PRODUCT_PACKAGES += \
     audio_amplifier.kona
 
 PRODUCT_PACKAGES += \
+    audio.primary.default \
+    audio.primary.msmnile \
     audio.bluetooth.default \
     libldacBT_abr \
     libldacBT_bco \
