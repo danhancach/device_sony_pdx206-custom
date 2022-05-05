@@ -134,26 +134,17 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
-    libaudiopreprocessing \
     libbatterylistener \
-    libbundlewrapper \
-    libcirrusspkrprot \
     libcomprcapture \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
     libexthwplugin \
     libhdmiedid \
     libhfp \
-    libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libreverbwrapper \
     libsndmonitor \
     libspkrprot \
     libssrec \
-    libvisualizer \
     libvolumelistener
 
 # Audio Policies
