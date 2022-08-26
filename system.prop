@@ -21,6 +21,7 @@ persist.vendor.dpm.feature=9
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.renderer=skiagl
 renderthread.skia.reduceopstasksplitting=true 
+debug.sf.enable_transaction_tracing=false
 
 # IMS
 persist.dbg.volte_avail_ovr=1
