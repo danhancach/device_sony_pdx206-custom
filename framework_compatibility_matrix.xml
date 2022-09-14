@@ -615,18 +615,15 @@
             <instance>wigigp2p</instance>
         </interface>
     </hal>
-<hal format="hidl" optional="true">
-    <name>android.hardware.drm</name>
-    <version>1.0-4</version>
-    <interface>
-        <name>ICryptoFactory</name>
-        <instance>clearkey</instance>
-    </interface>
-    <interface>
-        <name>IDrmFactory</name>
-        <instance>clearkey</instance>
-    </interface>
-</hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.drm</name>
+        <version>1</version>
+        <interface>
+            <name>IDrmFactory</name>
+            <name>ICryptoFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+    </hal>
 <hal format="hidl" optional="true">
     <name>android.hardware.usb</name>
     <version>1.0-3</version>
