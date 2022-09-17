@@ -32,6 +32,9 @@
 #
 
 on early-init
+    # Start audio adsp rpc daemon at early init stage
+    start vendor.audioadsprpcd_audiopd
+    
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules \
         q6_pdr_dlkm \
         q6_notifier_dlkm \
