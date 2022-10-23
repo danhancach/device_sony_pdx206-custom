@@ -18,6 +18,8 @@
 /mnt/idd/startup-prober(/.*)?             u:object_r:startupprober_file:s0
 /data/vendor/3dra(/.*)?                   u:object_r:vendor_audio_data_file:s0
 
+# FPS Info
+/sys/class/drm/sde-crtc-0/measured_fps                               u:object_r:vendor_sysfs_graphics:s0
 
 # HALs
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service\.sony_edo                   u:object_r:hal_light_default_exec:s0
