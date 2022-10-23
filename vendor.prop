@@ -143,6 +143,8 @@ dalvik.vm.minidebuginfo=false
 
 # Display
 ro.vendor.display.cabl=0
+ro.surface_flinger.set_idle_timer_ms=4000
+ro.surface_flinger.set_touch_timer_ms=4000
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.has_wide_color_display=true
 vendor.display.disable_scaler=0
