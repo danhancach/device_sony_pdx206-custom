@@ -99,6 +99,7 @@ persist.vendor.audio.fluence.speaker=true
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
+bluetooth.device.class_of_device=90,2,12
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
