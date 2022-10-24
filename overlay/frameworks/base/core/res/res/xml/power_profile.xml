@@ -174,10 +174,6 @@
         <value>112.33</value>
     </array>
     <item name="modem.controller.voltage">580</item>
-    <item name="bluetooth.controller.idle">0.59</item>
-    <item name="bluetooth.controller.rx">66.68</item>
-    <item name="bluetooth.controller.tx">77.97</item>
-    <item name="bluetooth.controller.voltage">3800.00</item>
     <array name="gps.signalqualitybased">
         <value>47.39</value>
         <value>11.94</value>

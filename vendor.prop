@@ -134,6 +134,10 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
+bluetooth.hardware.power.idle_cur_ma=0.59
+bluetooth.hardware.power.operating_voltage_mv=3800
+bluetooth.hardware.power.rx_cur_ma=66.68
+bluetooth.hardware.power.tx_cur_ma=77.97
 
 # Camera
 vendor.camera.enable.uvc=true
