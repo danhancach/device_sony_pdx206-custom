@@ -129,6 +129,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    libldacBT_abr \
+    libldacBT_bco \
+    libldacBT_enc \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usbv2.default \
