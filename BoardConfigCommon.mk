@@ -61,6 +61,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=a600000.dwc3 \
     buildid=EDO-1.0.1-201109-1152 \
     cgroup.memory=nokmem,nosocket \
+    kpti=off \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
