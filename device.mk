@@ -325,6 +325,11 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health \
     vendor.lineage.health-service.default
 
+ifneq ($(TARGET_IS_VAB),true)
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl.recovery
+endif
+
 # HDR
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libhdr_somc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/libhdr_somc.xml
