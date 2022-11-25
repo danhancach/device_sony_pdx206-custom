@@ -136,7 +136,6 @@ PRODUCT_PACKAGES += \
     libcomprcapture \
     libdownmix \
     libdynproc \
-    libeffectproxy \
     libexthwplugin \
     libhdmiedid \
     libhfp \
@@ -278,6 +277,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.semc.hardware.display@2.2.vendor
+
+# Dolby
+$(call inherit-product, vendor/dolby/config.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
