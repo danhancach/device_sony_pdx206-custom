@@ -115,11 +115,6 @@ vendor/etc/zoom_noise_reduction/znr_48k_TeleCam.tbl
 vendor/etc/zoom_noise_reduction/znr_48k_WideCam.tbl
 vendor/etc/zoom_noise_reduction/znr_parameter.xml
 vendor/lib64/librebuffering.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/libsony3daudioeffect.so
 vendor/lib64/libOARenderer.so
 vendor/lib64/libSForceVSE.so
@@ -132,13 +127,6 @@ vendor/lib64/libaudiokeymgr.so
 vendor/lib64/libops.so
 vendor/lib/librebuffering.so
 vendor/lib/libznr.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
-vendor/lib/soundfx/libznrwrapper.so
-vendor/lib/soundfx/libdnnrwrapper.so
 vendor/lib/libsony3daudioeffect.so
 vendor/lib/libaudiosnpewrapper.so
 vendor/lib/libOARenderer.so
@@ -2418,3 +2406,26 @@ vendor/etc/change.cfg
 
 # Touchscreen firmware
 vendor/firmware/touch_module_id_0x83.img
+
+# Sound FX
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libbundlewrapper.so
+vendor/lib/soundfx/libbundlewrapper1.so
+vendor/lib/soundfx/libbundlewrapper2.so
+vendor/lib/soundfx/libbundlewrapper3.so
+vendor/lib/soundfx/libbundlewrapper4.so
+vendor/lib/soundfx/libeffectproxy.so
+vendor/lib/soundfx/libhapticgenerator.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib/soundfx/libznrwrapper.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libbundlewrapper.so
+vendor/lib64/soundfx/libbundlewrapper1.so
+vendor/lib64/soundfx/libbundlewrapper2.so
+vendor/lib64/soundfx/libbundlewrapper3.so
+vendor/lib64/soundfx/libbundlewrapper4.so
+vendor/lib64/soundfx/libdnnrwrapper.so
+vendor/lib64/soundfx/libeffectproxy.so
+vendor/lib64/soundfx/libhapticgenerator.so
+vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/soundfx/libznrwrapper.so
