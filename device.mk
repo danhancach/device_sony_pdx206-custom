@@ -421,7 +421,8 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.sony_edo
+    android.hardware.lights-service.sony \
+    android.hardware.light-V1-ndk.vendor
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

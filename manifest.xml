@@ -1,11 +1,6 @@
 <manifest version="2.0" type="device" target-level="5">
 
     <!--AIDL-->
-    <hal format="aidl">
-        <name>android.hardware.light</name>
-        <transport>hwbinder</transport>
-        <fqname>ILights/default</fqname>
-    </hal>
 
     <!--HIDL-->
     <hal format="hidl">
