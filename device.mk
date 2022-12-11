@@ -317,7 +317,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+    android.hardware.biometrics.fingerprint@2.3.vendor
 
 # GPS
 PRODUCT_COPY_FILES += \
