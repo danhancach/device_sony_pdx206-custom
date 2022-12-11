@@ -143,10 +143,6 @@ vendor/lib/libc++_shared.so
 vendor/lib/libsymphony-cpu.so
 vendor/lib/libops.so
 
-# Authsecret
-vendor/bin/hw/android.hardware.authsecret@1.0-service-qti
-vendor/etc/init/android.hardware.authsecret@1.0-service-qti.rc
-
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc

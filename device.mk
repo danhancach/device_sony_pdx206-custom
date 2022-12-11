@@ -189,7 +189,7 @@ PRODUCT_COPY_FILES += \
 
 # Authsecret
 PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0.vendor
+    android.hardware.authsecret@1.0-service
 
 # Bluetooth
 PRODUCT_PACKAGES += \
