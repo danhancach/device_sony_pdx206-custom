@@ -271,8 +271,7 @@ PRODUCT_PACKAGES += \
     libvulkan \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack-service.example \
     gralloc.kona \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
