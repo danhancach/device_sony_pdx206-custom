@@ -245,7 +245,6 @@ persist.vendor.radio.unicode_op_names=true
 persist.vendor.radio.do_not_use_oprt_db=true
 persist.vendor.radio.5g_mode_pref=0
 persist.vendor.radio.report_codec=1
-persist.vendor.radio.add_power_save=1
 persist.vendor.radio.mt_sms_ack=19
 persist.vendor.radio.manual_nw_rej_ct=1
 persist.vendor.radio.procedure_bytes=SKIP
@@ -254,6 +253,10 @@ persist.vendor.radio.oem_socket=true
 persist.vendor.radio.enableadvancedscan=true
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_network=33,22
+
+# Radio Perf
+# RIL Battery Saving off
+persist.vendor.radio.add_power_save=0
 
 # Sensors
 persist.vendor.sensors.sync_request=true
