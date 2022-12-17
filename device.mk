@@ -167,7 +167,6 @@ PRODUCT_PACKAGES += \
 
 # Audio Policies
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
@@ -291,7 +290,7 @@ PRODUCT_PACKAGES += \
     vendor.semc.hardware.display@2.2.vendor
 
 # Dolby
-$(call inherit-product, vendor/dolby/config.mk)
+$(call inherit-product, hardware/sony/configs.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
