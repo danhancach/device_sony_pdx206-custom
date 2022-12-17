@@ -1,4 +1,4 @@
-<compatibility-matrix type="framework" version="2.0">
+<compatibility-matrix type="framework" version="5.0">
 
     <!--AIDL-->
     <hal format="aidl" optional="true">
