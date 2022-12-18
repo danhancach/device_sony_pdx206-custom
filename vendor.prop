@@ -223,8 +223,7 @@ ro.incremental.enable=true
 ro.hardware.keystore_desede=true
 
 # Media
-debug.stagefright.omx_default_rank=0
-debug.stagefright.ccodec=1
+debug.media.codec2=2
 
 # NFC
 ro.camera.notify_nfc=1
