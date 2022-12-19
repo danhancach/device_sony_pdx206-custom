@@ -338,14 +338,12 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    vendor.lineage.health \
-    vendor.lineage.health-service.default
+    android.hardware.health-service.example \
+    android.hardware.health@2.1.vendor
 
 ifneq ($(TARGET_IS_VAB),true)
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl.recovery
+    android.hardware.health-service.example_recovery
 endif
 
 # HDR
@@ -516,7 +514,7 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
-    
+
 # QTI media
 $(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.mk)
 
