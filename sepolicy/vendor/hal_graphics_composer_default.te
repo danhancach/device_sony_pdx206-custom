@@ -7,3 +7,11 @@ allow hal_graphics_composer_default property_socket:sock_file { write };
 
 allow hal_graphics_composer_default init:unix_stream_socket { connectto };
 allow hal_graphics_composer_default sysfs_dp:file { write };
+
+hal_client_domain(hal_graphics_composer_default, hal_power)
+
+binder_call(hal_graphics_composer_default, hal_power_service);
+binder_call(hal_graphics_composer_default, hal_power_default);
+
+# allow composer client to find display config service.
+allow hal_graphics_composer_default hal_power_service:service_manager find;
