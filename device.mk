@@ -517,7 +517,7 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor
 
 # QTI media
-$(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.mk)
+$(call inherit-product, hardware/sony/qcom/media-legacy/qti-media-legacy.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
