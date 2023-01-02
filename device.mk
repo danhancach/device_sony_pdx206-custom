@@ -191,8 +191,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
-
+    vendor.qti.hardware.btconfigstore@2.0.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+    
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
