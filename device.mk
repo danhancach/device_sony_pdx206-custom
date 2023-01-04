@@ -397,8 +397,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libavservices_minijail \
-    libcodec2_hidl@1.0.vendor:32 \
-    libcodec2_vndk.vendor:32 \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.2.vendor
 
