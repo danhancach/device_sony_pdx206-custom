@@ -31,6 +31,8 @@
 # Modifications are licensed under the License.
 #
 
+import /vendor/etc/init/hw/init.target.performance.rc
+
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules \
         q6_pdr_dlkm \

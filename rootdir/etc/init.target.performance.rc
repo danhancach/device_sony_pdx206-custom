@@ -1,0 +1,28 @@
+#
+# Copyright (c) 2019-2021, SHIFT GmbH. All rights reserved.
+#
+
+# Charger mode - conserve power and start thermal monitoring
+
+on charger
+    stop vendor.sensors
+
+    # Enable only CPU core 0 to keep current drain to a minimum
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+
+    # Allow system to sleep when in COM
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    write /proc/sys/kernel/sched_boost 0
+
+    # Start thermal-engine and system_suspend
+    mount tmpfs tmpfs /data
+    start thermal-engine
+    start system_suspend
