@@ -633,7 +633,8 @@ PRODUCT_COPY_FILES += \
 
 # XperiaParts
 PRODUCT_PACKAGES += \
-    XperiaParts
+    XperiaParts \
+    SonySwitcher
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
