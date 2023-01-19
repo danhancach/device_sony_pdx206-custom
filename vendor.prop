@@ -141,6 +141,7 @@ persist.vendor.bt.a2dp.hal.implementation=true
 
 # Camera
 vendor.camera.enable.uvc=true
+persist.vendor.camera.perflock.enable=0
 
 # Chipset
 ro.soc.manufacturer=QTI
