@@ -279,3 +279,6 @@ wifi.aware.interface=wifi-aware0
 
 # Zygote
 zygote.critical_window.minute=10
+
+# IDD
+vendor.idd.product.name=pdx206
