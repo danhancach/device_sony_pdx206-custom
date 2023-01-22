@@ -14,6 +14,11 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Inherit some common evolution stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_MINI_GAPPS := true
+
 IS_PHONE := true
 
 PRODUCT_NAME := evolution_pdx206

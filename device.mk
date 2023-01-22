@@ -16,9 +16,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
