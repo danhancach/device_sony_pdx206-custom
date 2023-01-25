@@ -1,4 +1,4 @@
-# Stock package version: Sony/XQ-AT52/XQ-AT52:12/58.2.A.4.52/058002A004005204241360111:user/release-keys
+# Stock package version: Sony/XQ-AS52/XQ-AS52:12/58.2.A.10.126/058002A010012603718185433:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
