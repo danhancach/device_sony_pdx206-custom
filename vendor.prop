@@ -226,9 +226,6 @@ ro.hardware.keystore_desede=true
 # Media
 debug.media.codec2=2
 
-# Multi-gen LRU
-persist.device_config.mglru_native.lru_gen_config=all
-
 # NFC
 ro.camera.notify_nfc=1
 
