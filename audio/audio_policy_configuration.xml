@@ -87,7 +87,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <attachedDevices>
                 <item>Earpiece</item>
                 <item>Speaker</item>
-                <item>Speaker Safe</item>
                 <item>Telephony Tx</item>
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
@@ -277,10 +276,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_INDEX_MASK_2"/>
                 </devicePort>
-                <devicePort tagName="Speaker Safe" role="sink" type="AUDIO_DEVICE_OUT_SPEAKER_SAFE" address="">
-                    <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_INDEX_MASK_2"/>
-                </devicePort>
                 <devicePort tagName="Wired Headset" type="AUDIO_DEVICE_OUT_WIRED_HEADSET" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
                              samplingRates="48000 96000 192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_INDEX_MASK_2"/>
@@ -366,8 +361,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <route type="mix" sink="Earpiece"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output"/>
-                <route type="mix" sink="Speaker Safe"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output"/>
                 <route type="mix" sink="Wired Headset"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output"/>
