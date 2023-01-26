@@ -259,7 +259,6 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
     libqdMetaData \
     libtinyxml \
     libvulkan \
