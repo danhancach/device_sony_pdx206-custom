@@ -18,7 +18,7 @@ $(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 29
