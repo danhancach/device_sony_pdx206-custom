@@ -65,6 +65,11 @@ vendor.iop.enable_uxe=0
 
 # Media
 vendor.mm.enable.qcom_parser=4044018
+media.settings.xml=/odm/etc/media_profiles_V1_0.xml
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Netflix
+ro.netflix.bsp_rev=Q8250-19134-1
 
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
