@@ -3,26 +3,6 @@ audio.offload.min.duration.secs=30
 persist.vendor.audio.hac.enable=false
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
-# Bluetooth
-bluetooth.device.class_of_device=90,2,12
-bluetooth.profile.a2dp.source.enabled=true
-bluetooth.profile.asha.central.enabled=true
-bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.bas.client.enabled=true
-bluetooth.profile.gatt.enabled=true
-bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
-bluetooth.profile.hid.host.enabled=true
-bluetooth.profile.map.server.enabled=true
-bluetooth.profile.opp.enabled=true
-bluetooth.profile.pan.nap.enabled=true
-bluetooth.profile.pan.panu.enabled=true
-bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.sap.server.enabled=true
-bluetooth.profile.vcp.controller.enabled=true
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.enable.twsplussho=true
-
 # Camera
 camera.disable_zsl_mode=true
 
@@ -34,8 +14,6 @@ debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 persist.vendor.color.matrix=2
-ro.config.avoid_gfx_accel=false
-ro.config.low_ram=false
 
 # CNE
 persist.vendor.cne.feature=1
@@ -43,21 +21,10 @@ persist.vendor.cne.feature=1
 # DPM
 persist.vendor.dpm.feature=9
 
-# SkiaGL Threaded
-debug.renderengine.backend=skiaglthreaded
-debug.hwui.renderer=skiagl
-renderthread.skia.reduceopstasksplitting=true 
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-
-# IMS Debugging
-persist.vendor.ims.disableADBLogs=1
-persist.vendor.ims.disableDebugLogs=1
-persist.vendor.ims.disableIMSLogs=1
-persist.vendor.ims.disableQXDMLogs=1
 
 # IOP
 vendor.iop.enable_prefetch_ofr=1
@@ -92,12 +59,12 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # SOMC
 # ro.semc.ms_type_id=PM-1281-BV
 # ro.semc.product.device=AU
-# ro.semc.product.model=XQ-AU52
-# ro.semc.product.name=Xperia 1 II
+# ro.semc.product.model=XQ-AS72
+# ro.semc.product.name=Xperia 5 II
 # ro.semc.version.fs=GENERIC
-# ro.semc.version.fs_revision=59.0.A.8.33
+# ro.semc.version.fs_revision=58.2.A.10.126
 # ro.semc.version.sw=1311-7920
-# ro.semc.version.sw_revision=59.0.A.8.33
+# ro.semc.version.sw_revision=58.2.A.10.126
 # ro.semc.version.sw_type=user
 # ro.semc.version.sw_variant=GLOBAL4GB-C2
 

@@ -5,6 +5,10 @@ model=`sed -e '/[Mm][Oo][Dd][Ee][Ll]: /!d' -e 's/^.*[Mm][Oo][Dd][Ee][Ll]: \([A-Z
 case "$model" in
     "XQ-AT42" | "XQ-AT52" | "XQ-AT72" | "XQ-AQ52" | "XQ-AQ62" | "XQ-AS42" | "XQ-AS52" | "XQ-AS62" | "XQ-AS72" )
         setprop vendor.radio.multisim.config dsds;;
+    "XQ-AS42" )
+        setprop vendor.radio.multisim.config dsds
+        setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
+        ;;
     * )
         setprop vendor.radio.multisim.config ss;;
 esac

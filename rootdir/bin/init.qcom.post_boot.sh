@@ -585,6 +585,8 @@ function configure_zram_parameters() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
+    low_ram=`getprop ro.config.low_ram`
+
     # Zram disk - 75% for Go devices.
     # For 512MB Go device, size = 384MB, set same for Non-Go.
     # For 1GB Go device, size = 768MB, set same for Non-Go.
@@ -605,7 +607,9 @@ function configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
-    echo lz4 > /sys/block/zram0/comp_algorithm
+    if [ "$low_ram" == "true" ]; then
+        echo lz4 > /sys/block/zram0/comp_algorithm
+    fi
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
@@ -4030,6 +4034,9 @@ case "$target" in
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
+
+    echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
+    echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
     # Set Memory parameters
     configure_memory_parameters

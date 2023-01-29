@@ -34,6 +34,15 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    SonyEdoFrameworksResCommon \
+    SonyEdoSettingsProviderOverlayCommon \
+    SonyEdoSettingsResCommon \
+    SonyEdoSystemUIResCommon \
+    SonyEdoTelephonyResCommon \
+    Sonypdx206SystemUIRes \
+    WifiResCommon
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -98,9 +107,13 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 # Audio
 PRODUCT_PACKAGES += \
-        android.hardware.audio@2.0 \
+    android.hardware.audio@2.0 \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-util \
     android.hardware.audio.effect@2.0-impl \
@@ -347,8 +360,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     libhidltransport.vendor \
-    android.hidl.base@1.0.vendor \
-    android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     libhwbinder.vendor
 
@@ -449,13 +460,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.sony \
-    android.hardware.light-V1-ndk.vendor
+    android.hardware.lights-service.sony 
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.sony
-
 
 # Net
 PRODUCT_PACKAGES += \
@@ -542,6 +551,15 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces
 
+# Set fdsan to the warn_once severity level
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.fdsan=warn_once
+
+# Shim
+PRODUCT_PACKAGES += \
+    android.hardware.light-V1-ndk_platform.vendor \
+    android.hidl.base@1.0.vendor
+
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
@@ -608,13 +626,13 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     android.hardware.wifi.supplicant \
     android.hardware.wifi.hostapd \
-    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl
+    libnl \
+    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
@@ -630,6 +648,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Set fdsan to the warn_once severity level
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.fdsan=warn_once
