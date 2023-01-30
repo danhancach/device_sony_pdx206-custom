@@ -14,14 +14,19 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Inherit some common evolution stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
+# Specific props
+RICE_MAINTAINER := danhancach
+TARGET_ENABLE_BLUR := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+BOOTANIMATION := 1080
+WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
+TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+RICE_CHIPSET := "Snapdragon 865 5G"
 
 IS_PHONE := true
 
-PRODUCT_NAME := pdx206
+PRODUCT_NAME := evolution_pdx206
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
