@@ -230,7 +230,6 @@ PRODUCT_PACKAGES += \
     init_thermal.sh \
     init.class_main.sh \
     init.crda.sh \
-    init.gadgethal.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -243,15 +242,12 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.qti.ufs.rc \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.qti.qcv.sh \
     qca6234-service.sh \
     init.recovery.qcom.rc \
-    init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
     fstab.qcom \
@@ -533,21 +529,18 @@ PRODUCT_PACKAGES += \
     extphonelib \
     extphonelib.xml
 
-# USB HAL
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.sonykona \
-    android.hardware.usb.gadget-service.sonykona
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     libsensorndkbridge
 
+# Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/sony \
     hardware/google/pixel \
-    hardware/google/interfaces
+    hardware/google/interfaces \
+    vendor/qcom/opensource/usb/etc
 
 # Set fdsan to the warn_once severity level
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -598,6 +591,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service-qti
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
