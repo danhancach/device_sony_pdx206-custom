@@ -13,3 +13,12 @@ binder_call(system_app, hal_disp_default)
 allow system_app hal_disp_default:binder call;
 
 allow system_app vendor_sysfs_graphics:file { getattr open read };
+
+# allow system apps to read battery status
+r_dir_file(system_app, sysfs_battery_supply)
+
+# Battery Health
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { read };
+allow system_app sysfs_battery_supply:file { open };
+allow system_app sysfs_battery_supply:file { getattr };
