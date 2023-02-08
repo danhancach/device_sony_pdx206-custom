@@ -15,14 +15,15 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Specific props
-RICE_MAINTAINER := danhancach
-TARGET_ENABLE_BLUR := true
+PRODUCT_BRAND := EvolutionX
 TARGET_USE_PIXEL_FINGERPRINT := true
-BOOTANIMATION := 1080
+TARGET_BOOT_ANIMATION_RES := 1080
 WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
-RICE_CHIPSET := "Snapdragon 865 5G"
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+EVO_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 IS_PHONE := true
 
