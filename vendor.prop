@@ -252,6 +252,9 @@ persist.vendor.sensors.allow_non_default_discovery=true
 # shutdown
 sys.vendor.shutdown.waittime=500
 
+# Touch
+ro.vendor.display.low_touch_rate=false
+
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
