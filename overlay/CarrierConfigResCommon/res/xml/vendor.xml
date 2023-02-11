@@ -1750,6 +1750,10 @@
         <boolean name="disable_dun_apn_while_roaming_with_preset_apn_bool" value="true" />
         <boolean name="format_incoming_number_to_national_for_jp_bool" value="true" />
         <string name="call_redirection_service_component_name_string">com.sonymobile.supplementallyservice.kddi/.KddiCallRedirectionService</string>
+        
+        <!-- Allow VoLTE and WFC by default -->
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <carrier_config board="kona" gid1="10" mcc="440" mnc="54" sku="jp_kddi">
         <int name="imsi_key_availability_int" value="0" />
