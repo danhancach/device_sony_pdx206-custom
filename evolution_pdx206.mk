@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2021 The LineageOS Project
-#
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -22,7 +21,6 @@ WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-EVO_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 IS_PHONE := true

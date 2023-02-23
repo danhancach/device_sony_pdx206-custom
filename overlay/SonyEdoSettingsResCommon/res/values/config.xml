@@ -4,7 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
     <!-- Whether to show min/max refresh rate in display settings -->
     <bool name="config_show_refresh_rate_controls">true</bool>
     <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
@@ -17,5 +16,4 @@
     <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
     <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
     <bool name="config_supportBatteryHealth">true</bool>
-
 </resources>

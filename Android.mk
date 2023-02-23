@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2021 The LineageOS Project
-#
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -9,7 +8,6 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter pdx206,$(TARGET_DEVICE)),)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
-endif
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
@@ -218,3 +216,4 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_SLPI_SYMLINKS) \
     $(RFS_MSM_WPSS_SYMLINKS) \
     $(WIFI_FIRMWARE_SYMLINKS)
+endif
