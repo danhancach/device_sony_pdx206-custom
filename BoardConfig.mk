@@ -120,6 +120,9 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
+# Board
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Display
 TARGET_NO_RAW10_CUSTOM_FORMAT := true
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
@@ -146,7 +149,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/evolution/config/device_framework_matrix.xml
+    vendor/aosp/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
