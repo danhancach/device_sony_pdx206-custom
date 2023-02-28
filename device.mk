@@ -480,7 +480,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.power@1.3.vendor \
-    vendor.qti.hardware.perf@2.3.vendor
+
+# Perf
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
+    vendor.qti.hardware.perf@2.2 \
+    vendor.qti.hardware.perf@2.2.vendor \
+    vendor.qti.hardware.perf@2.3 \
+    libpsi.vendor \
+    libtflite \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
+# Perf Boot Jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    QXPerformance \
+    UxPerformance
+
 
 # QMI
 PRODUCT_PACKAGES += \
