@@ -559,6 +559,9 @@
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">32</integer>
 
+    <!-- QTI Boost Framework - AOSP Version -->
+    <bool name="config_supportsBoostFramework">true</bool>
+
     <!-- Hardware keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:

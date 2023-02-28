@@ -283,11 +283,6 @@
       <fqname>@1.0::IIdd/logreader</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.2::IPerf/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.semc.hardware.display</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IDisplay/default</fqname>
@@ -426,5 +421,27 @@
         <name>vendor.semc.hardware.charger</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICharger/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.perf</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.2::IPerf/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.iop</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IFactory/default</fqname>
+        <fqname>@2.0::IIop/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.servicetracker</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IServicetracker/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IPasrManager/pasrhal</fqname>
+        <fqname>@1.1::IPasrManager/default</fqname>
     </hal>
 </manifest>
