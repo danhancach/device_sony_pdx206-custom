@@ -497,6 +497,8 @@ PRODUCT_BOOT_JARS += \
     QXPerformance \
     UxPerformance
 
+# QTI Power HAL
+$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # QMI
 PRODUCT_PACKAGES += \
