@@ -19,3 +19,5 @@ allow vendor_init persist_debug_prop:file read;
 allow vendor_init vendor_display_color_prop:property_service set;
 allow vendor_init vendor_display_color_prop:file { read getattr map open };
 
+# Allow vendor init to set SSR property
+get_prop(vendor_init, persist_debug_prop)
