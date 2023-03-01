@@ -256,7 +256,6 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libqdMetaData \
-    libvulkan \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack-service.example \
@@ -602,10 +601,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh
-
-# Vendor libstdc++
-PRODUCT_PACKAGES += \
-    libstdc++.vendor
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
