@@ -238,4 +238,4 @@ CONFIG_IEEE80211AC := true
 CONFIG_IEEE80211AX := true
 
 # Include the proprietary files BoardConfig.
--include vendor/sony/pdx206/BoardConfigVendor.mk
+include vendor/sony/pdx206/BoardConfigVendor.mk
