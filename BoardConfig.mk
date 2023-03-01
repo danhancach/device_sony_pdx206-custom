@@ -65,6 +65,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
+TARGET_KERNEL_CONFIG += kernel/sony/sm8250/arch/arm/configs/vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/sony/sm8250
 TARGET_KERNEL_CONFIG := pdx206_defconfig
 
