@@ -197,7 +197,6 @@ persist.backup.ntpServer=0.pool.ntp.org
 debug.sf.auto_latch_unsignaled=true
 debug.sf.treat_170m_as_sRGB=1
 debug.mdpcomp.logs=0
-debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.enable_gl_backpressure=1
