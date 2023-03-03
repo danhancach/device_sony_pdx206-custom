@@ -24,6 +24,9 @@
      <!-- Wifi driver supports IEEE80211AX for softap -->
      <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
 
+     <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
     <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
          This mechanism allows the host to remain in suspend state and the dongle to actively
          scan and wake the host when a configured SSID is detected by the dongle. This chipset
