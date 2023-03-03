@@ -28,3 +28,6 @@ allow init vendor_hal_soter_qti_exec:file { read getattr map execute open };
 allow init vendor_hal_soter_qti:process { transition siginh rlimitinh };
 
 allow init adsprpcd_file:file mounton;
+
+# Allow init to set read_ahead_kb on /data partition
+allow init vendor_sysfs_scsi_host:file w_file_perms;
