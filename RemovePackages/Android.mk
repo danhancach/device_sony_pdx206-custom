@@ -23,7 +23,8 @@ LOCAL_OVERRIDES_PACKAGES := \
     SCONE \
     talkback \
     TrichromeLibrary \
-    WebViewGoogle
+    WebViewGoogle \
+	Music MusicFX AudioFX
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
