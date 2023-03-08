@@ -33,6 +33,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.sony                              u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.sony                                    u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service                                   u:object_r:hal_authsecret_default_exec:s0
+/vendor/bin/hw/dolbycodec2			                                                                        u:object_r:mediacodec_exec:s0
 
 # Devices
 /dev/socket/tad                                           u:object_r:tad_socket:s0

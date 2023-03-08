@@ -234,5 +234,9 @@ CONFIG_ACS := true
 CONFIG_IEEE80211AC := true
 CONFIG_IEEE80211AX := true
 
+SOONG_CONFIG_NAMESPACES += dolby_vision
+SOONG_CONFIG_dolby_vision += enabled
+SOONG_CONFIG_dolby_vision_enabled := true
+
 # Include the proprietary files BoardConfig.
 include vendor/sony/pdx206/BoardConfigVendor.mk
