@@ -9,9 +9,6 @@ persist.vendor.display.sspp_color_mode=1
 persist.vendor.display.opec_mode=0
 vendor.display.hmd_mode=0
 
-# Dolby Atmos
-ro.vendor.sony.effect.dolby_atmos=true
-
 # Smooth display
 ro.surface_flinger.set_idle_timer_ms=4000
 ro.surface_flinger.set_touch_timer_ms=4000
