@@ -99,12 +99,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     pm.dexopt.ab-ota=speed-profile
 
-# Preopted ODEX files (system_other)
-PRODUCT_PACKAGES += \
-    cppreopts.sh
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cp_system_other_odex=1
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \

@@ -12,9 +12,6 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # A/B
 AB_OTA_UPDATER := true
 
-# A/B ART
-BOARD_USES_SYSTEM_OTHER_ODEX := true
-
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
