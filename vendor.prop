@@ -279,3 +279,6 @@ zygote.critical_window.minute=10
 
 # IDD
 vendor.idd.product.name=pdx206
+
+# Multi-gen LRU
+persist.device_config.mglru_native.lru_gen_config=all
