@@ -34,10 +34,6 @@ persist.dbg.wfc_avail_ovr=1
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
-# IOP
-vendor.iop.enable_prefetch_ofr=1
-vendor.iop.enable_uxe=0
-
 # Media
 media.settings.xml=/odm/etc/media_profiles_V1_0.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
