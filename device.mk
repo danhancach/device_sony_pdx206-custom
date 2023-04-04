@@ -261,7 +261,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.semc.hardware.display@2.2.vendor
+    vendor.semc.hardware.display@2.2.vendor \
+    vendor.semc.hardware.display@2.3.vendor \
+    vendor.semc.hardware.display@2.4.vendor \
+    vendor.semc.hardware.display@2.5.vendor
 
 # Dolby
 $(call inherit-product, hardware/sony/configs.mk)
