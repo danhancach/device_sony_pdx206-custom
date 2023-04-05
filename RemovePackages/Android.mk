@@ -7,11 +7,13 @@ LOCAL_OVERRIDES_PACKAGES := \
     ANGLE \
     AmbientSensePrebuilt \
     AppDirectedSMSService \
+    Aperture \
     AndroidAutoStubPrebuilt \
     BetterBugStub \
     CalendarGooglePrebuilt \
     CarrierLocation \
     Chrome \
+    Chrome.apk.gz \
     Chrome-Stub \
     DeviceIntelligenceNetworkPrebuilt \
     FilesPrebuilt \
@@ -24,7 +26,12 @@ LOCAL_OVERRIDES_PACKAGES := \
     talkback \
     TrichromeLibrary \
     WebViewGoogle \
-	Music MusicFX AudioFX
+	Music MusicFX AudioFX \
+    Browser2 \
+    Calendar \
+    Contacts \
+    DeskClock \
+    Gallery2
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
