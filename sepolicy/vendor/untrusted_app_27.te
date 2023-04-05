@@ -1,0 +1,4 @@
+allow untrusted_app_27 proc_pid_max:file { open read };
+allow untrusted_app_27 proc_pid_max:file { getattr };
+allow untrusted_app_27 vendor_sysfs_devicetree_soc:dir { search };
+allow untrusted_app_27 app_data_file:file { execute };

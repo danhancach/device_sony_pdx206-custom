@@ -1,0 +1,2 @@
+allow fsck_untrusted sysfs:file { open read };
+allow fsck_untrusted sysfs:file { getattr };

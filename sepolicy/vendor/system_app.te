@@ -22,3 +22,7 @@ allow system_app sysfs_battery_supply:dir { search };
 allow system_app sysfs_battery_supply:file { read };
 allow system_app sysfs_battery_supply:file { open };
 allow system_app sysfs_battery_supply:file { getattr };
+
+allow system_app qemu_hw_prop:file { open read };
+allow system_app qemu_hw_prop:file { getattr };
+allow system_app qemu_hw_prop:file { map };

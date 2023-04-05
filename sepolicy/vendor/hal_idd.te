@@ -3,3 +3,10 @@ binder_call(hal_idd_server, hal_idd_client);
 
 add_hwservice(hal_idd_server, hal_idd_hwservice);
 allow hal_idd_client hal_idd_hwservice:hwservice_manager find;
+
+allow idd tmpfs:dir { add_name write };
+allow idd tmpfs:dir { create };
+allow idd tmpfs:file { create };
+allow idd tmpfs:file { read write };
+allow idd tmpfs:file { open };
+allow idd tmpfs:file { lock };
