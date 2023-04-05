@@ -266,9 +266,6 @@ PRODUCT_PACKAGES += \
     vendor.semc.hardware.display@2.4.vendor \
     vendor.semc.hardware.display@2.5.vendor
 
-# Dolby
-$(call inherit-product, hardware/sony/configs.mk)
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -634,6 +631,8 @@ PRODUCT_COPY_FILES += \
 # XperiaParts
 PRODUCT_PACKAGES += \
     XperiaParts
+
+$(call inherit-product, hardware/sony/configs.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
