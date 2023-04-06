@@ -23,6 +23,9 @@ $(call inherit-product, vendor/sony/sm8250-common/sm8250-common-vendor.mk)
 TARGET_EXCLUDES_AUDIOFX := true
 
 TARGET_ENABLE_BLUR := true
+ifeq ($(WITH_GMS),true)
+GMS_MAKEFILE := ../arm64/arm64-vendor.mk
+endif
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 29
