@@ -1,0 +1,7 @@
+allow idd tmpfs:dir { add_name };
+allow idd tmpfs:dir { create };
+allow idd tmpfs:dir { write };
+allow idd tmpfs:file { create };
+allow idd tmpfs:file { read write };
+allow idd tmpfs:file { open };
+allow idd tmpfs:file { lock };
