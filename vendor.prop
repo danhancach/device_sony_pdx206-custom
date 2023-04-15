@@ -34,8 +34,6 @@ vendor.audio.tunnel.encode=false
 vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.track.enable=true
 vendor.audio.offload.multiaac.enable=true
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.offload.multiple.enabled=false
 vendor.audio.offload.passthrough=false
 vendor.audio.offload.gapless.enabled=true
@@ -100,6 +98,7 @@ persist.vendor.audio.fluence.speaker=true
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
+bluetooth.device.default_name=Xperia 5 II
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
@@ -264,6 +263,9 @@ vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=0
 vendor.usb.use_gadget_hal=0
+
+# Touch
+ro.vendor.display.low_touch_rate=false
 
 # Wifi
 wifi.aware.interface=wifi-aware0
