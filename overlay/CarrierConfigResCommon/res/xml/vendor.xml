@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carrier_config_list>
     <carrier_config>
-        <boolean name="carrier_volte_available_bool" value="false" />
-        <boolean name="carrier_vt_available_bool" value="false" />
-        <boolean name="carrier_wfc_ims_available_bool" value="false" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="support_pause_ims_video_calls_bool" value="false" />
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
         <boolean name="display_hd_audio_property_bool" value="true" />
