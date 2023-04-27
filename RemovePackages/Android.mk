@@ -14,7 +14,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     AmbientSensePrebuilt \
     AppDirectedSMSService \
     Aperture \
-    AndroidAutoStubPrebuilt \
     BetterBugStub \
     CalendarGooglePrebuilt \
     CarrierLocation \
