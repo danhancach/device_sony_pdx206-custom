@@ -24,14 +24,15 @@ LOCAL_OVERRIDES_PACKAGES := \
     FilesPrebuilt \
     GCS \
     GoogleCamera \
-    GoogleTTS \
     PlayAutoInstallConfig \
-    Velvet \
     SCONE \
     talkback \
     TrichromeLibrary \
     WebViewGoogle \
-	Music MusicFX AudioFX \
+	Music \
+    MusicFX \
+    AudioFX \
+    SoundAmplifierPrebuilt \
     Browser2 \
     Calendar \
     Contacts \
