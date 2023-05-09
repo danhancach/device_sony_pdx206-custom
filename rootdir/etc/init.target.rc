@@ -138,7 +138,9 @@ on property:vendor.usb.controller=*
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
     swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 100
 
 on charger
 #    start vendor.power_off_alarm
