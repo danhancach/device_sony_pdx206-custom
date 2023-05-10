@@ -300,3 +300,6 @@ zygote.critical_window.minute=10
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
 ro.zram.periodic_wb_delay_hours=24
+
+# Cache
+debug.sf.disable_client_composition_cache=1
