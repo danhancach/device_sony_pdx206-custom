@@ -249,12 +249,6 @@ vendor.pasr.activemode.enabled=true
 # Multi-gen LRU
 persist.device_config.mglru_native.lru_gen_config=all
 
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.2
-ro.vendor.qspm.enable=true
-ro.vendor.perf.scroll_opt=true
-
 # Radio
 ro.telephony.default_network=33,33
 persist.vendor.radio.apm_sim_not_pwdn=1
