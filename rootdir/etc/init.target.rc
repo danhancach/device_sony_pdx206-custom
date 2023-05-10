@@ -168,10 +168,14 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/swappiness 100
 
 on charger
-#    start vendor.power_off_alarm
+    #start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     start leds-sh
+
+    # Battery smart charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 
 service vendor.lowi /vendor/bin/sscrpcd
    class core

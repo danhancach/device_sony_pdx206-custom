@@ -75,4 +75,6 @@
         <item>267</item>
     </integer-array>
 
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
 </resources>
