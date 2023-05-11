@@ -5707,8 +5707,8 @@ case "$target" in
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
 	echo 1574400 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
-	echo "4:1382400 5:1382400 6:1382400" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
-	echo 300 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+	# echo "4:1382400 5:1382400 6:1382400" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	# echo 300 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
