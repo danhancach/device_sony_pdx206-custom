@@ -21,6 +21,9 @@ $(call inherit-product-if-exists, hardware/sony/configs.mk)
 $(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.mk)
 $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 
+# Get Power-libperfmgr
+$(call inherit-product, hardware/sony/aidl/power-libperfmgr/power-libperfmgr.mk)
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -356,12 +359,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.power@1.3.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
 
 # Perf
 PRODUCT_COPY_FILES += \
