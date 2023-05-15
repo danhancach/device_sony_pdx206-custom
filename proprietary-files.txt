@@ -2496,3 +2496,22 @@ vendor/firmware/tzsecuredata.mdt
 
 # WLAN
 vendor/etc/wifi/wifi_txpower.conf
+
+# Reorganize rootdir
+vendor/etc/init/init.qti.ufs.rc
+vendor/etc/init/texfat.rc
+vendor/etc/init/init.qti.media.rc
+vendor/etc/init/init.qcom.factory.rc
+vendor/bin/qca6234-service.sh
+vendor/bin/init.qti.media.sh
+vendor/bin/init.crda.sh
+vendor/bin/init.mdm.sh
+vendor/bin/init.qcom.class_core.sh
+vendor/bin/init.qcom.coex.sh
+vendor/bin/init.qcom.efs.sync.sh
+vendor/bin/init.qcom.sdio.sh
+vendor/bin/init.qcom.sensors.sh
+vendor/bin/init.qti.chg_policy.sh
+vendor/bin/init.qti.dcvs.sh
+vendor/bin/init.qti.qcv.sh
+vendor/bin/init_thermal.sh

@@ -195,40 +195,6 @@ PRODUCT_PACKAGES += \
     vendor.sony.charger \
     vendor.sony.charger-service
 
-# Common init scripts
-PRODUCT_PACKAGES += \
-    init_thermal.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.msim.sh \
-    init.qcom.factory.rc \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.qti.ufs.rc \
-    init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.qcv.sh \
-    qca6234-service.sh \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    ueventd.qcom.rc \
-    fstab.qcom \
-    texfat.rc \
-    init.nfc.rc \
-    init.sony-device-common.rc \
-    init.sony-platform.rc \
-    init.sony.rc
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -267,10 +233,6 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:vendor/etc/fstab.qcom
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -406,10 +368,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
@@ -423,6 +381,24 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     extphonelib \
     extphonelib.xml
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom_ramdisk \
+    init.sony-device-common.rc \
+    init.sony.rc \
+    init.sony-platform.rc \
+    init.qcom.rc \
+    init.qcom.power.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.qcom.rc \
+    init.class_main.sh \
+    init.qcom.msim.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -482,7 +458,9 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    android.hardware.usb@1.3-service-qti \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
