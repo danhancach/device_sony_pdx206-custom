@@ -261,11 +261,6 @@
       <fqname>@1.1::IDeviceSecurity/default</fqname>
     </hal>
     <hal format="hidl">
-      <name>vendor.qti.hardware.iop</name>
-      <transport>hwbinder</transport>
-      <fqname>@2.0::IIop/default</fqname>
-    </hal>
-    <hal format="hidl">
       <name>vendor.qti.esepowermanager</name>
       <transport>hwbinder</transport>
       <fqname>@1.1::IEsePowerManager/default</fqname>
@@ -281,11 +276,6 @@
       <transport>hwbinder</transport>
       <fqname>@1.0::IIdd/default</fqname>
       <fqname>@1.0::IIdd/logreader</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.2::IPerf/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.semc.hardware.display</name>
@@ -426,5 +416,26 @@
         <name>vendor.semc.hardware.charger</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICharger/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.iop</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IFactory/default</fqname>
+        <fqname>@2.0::IIop/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.perf</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.2::IPerf/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.memory.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IPasrManager/pasrhal</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.qspmhal</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IQspmhal/default</fqname>
     </hal>
 </manifest>
