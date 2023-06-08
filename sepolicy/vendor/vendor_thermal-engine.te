@@ -5,3 +5,9 @@ get_prop(vendor_thermal-engine, hwservicemanager_prop)
 
 allow vendor_thermal-engine hal_idd_hwservice:hwservice_manager find;
 
+# Allow thermald to access battery supply sysfs
+r_dir_file(vendor_thermal-engine, vendor_sysfs_battery_supply)
+allow vendor_thermal-engine vendor_sysfs_battery_supply:{
+  file
+  lnk_file
+} rw_file_perms;

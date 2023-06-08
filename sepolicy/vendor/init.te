@@ -31,3 +31,6 @@ allow init vendor_hal_soter_qti:process { transition siginh rlimitinh };
 allow init vendor_sysfs_scsi_host:file w_file_perms;
 
 allow init adsprpcd_file:file mounton;
+
+# Allow init to write to vendor_sysfs_battery_supply
+allow init vendor_sysfs_battery_supply:file { setattr };
