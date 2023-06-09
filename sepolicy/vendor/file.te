@@ -20,3 +20,5 @@ type sysfs_tsp, fs_type, sysfs_type;
 type sysfs_dp, fs_type, sysfs_type;
 
 type public_adsprpcd_file, file_type;
+
+type vendor_sysfs_smb_device, fs_type, sysfs_type;
