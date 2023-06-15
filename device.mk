@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
     SonyPDX206FrameworksRes \
     SonyPDX206SettingsRes \
     SonyPDX206SystemUIRes \
-    WifiResCommon
+    WifiResCommon \
+    NfcResTarget
 
 # Permissions
 PRODUCT_COPY_FILES += \
