@@ -257,7 +257,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.example
+    android.hardware.health-service.example \
+    vendor.lineage.health-service.default
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -394,6 +395,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
+    ueventd.sony.rc \
     init.class_main.sh \
     init.qcom.msim.sh \
     init.qcom.early_boot.sh \
