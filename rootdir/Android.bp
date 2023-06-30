@@ -69,7 +69,7 @@ prebuilt_etc {
     name: "ueventd.sony.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd.sony.rc",
-    odm: true,
+    vendor: true,
 }
 
 sh_binary {
