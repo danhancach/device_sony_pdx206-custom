@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 VoidUI Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,6 +8,10 @@ service msim_sh /vendor/bin/init.qcom.msim.sh
     user root
     group root
     oneshot
+
+on boot
+    # Enable smart charging
+    write /sys/class/power_supply/battery_ext/smart_charging_activation 1
 
 on post-fs
     # radio

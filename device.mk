@@ -398,6 +398,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
+    ueventd.sony.rc \
     init.class_main.sh \
     init.qcom.msim.sh \
     init.qcom.early_boot.sh \
