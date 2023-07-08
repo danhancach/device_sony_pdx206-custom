@@ -69,6 +69,7 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 TARGET_EXCLUDES_AUDIOFX := true
 
 # Board
+BOARD_VENDOR := sony
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Bootloader

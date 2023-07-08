@@ -261,11 +261,6 @@
       <fqname>@1.1::IDeviceSecurity/default</fqname>
     </hal>
     <hal format="hidl">
-      <name>vendor.qti.hardware.iop</name>
-      <transport>hwbinder</transport>
-      <fqname>@2.0::IIop/default</fqname>
-    </hal>
-    <hal format="hidl">
       <name>vendor.qti.esepowermanager</name>
       <transport>hwbinder</transport>
       <fqname>@1.1::IEsePowerManager/default</fqname>
@@ -281,11 +276,6 @@
       <transport>hwbinder</transport>
       <fqname>@1.0::IIdd/default</fqname>
       <fqname>@1.0::IIdd/logreader</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.2::IPerf/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.semc.hardware.display</name>
