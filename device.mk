@@ -369,6 +369,9 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, hardware/sony/perf/qti-perf.mk)
 
+# Properties
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
