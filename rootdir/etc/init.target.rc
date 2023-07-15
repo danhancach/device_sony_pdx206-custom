@@ -133,7 +133,22 @@ on early-boot
     verity_update_state
 
 on boot
+    # Create the audio-app stune node
+    mkdir /dev/stune/audio-app
+    chown system system /dev/stune/audio-app
+    chown system system /dev/stune/audio-app/tasks
+    chmod 0664 /dev/stune/audio-app/tasks
+
+    # Create the audio-app cpuset
+    mkdir /dev/cpuset/audio-app
+    copy /dev/cpuset/cpus /dev/cpuset/audio-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/audio-app/mems
+    chown system system /dev/cpuset/audio-app
+    chown system system /dev/cpuset/audio-app/tasks
+    chmod 0664 /dev/cpuset/audio-app/tasks
     write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/mems 0
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
