@@ -31,6 +31,9 @@ $(call inherit-product, device/qcom/common/vendor/qseecomd-legacy/qti-qseecomd-l
 # Get qti wlan
 $(call inherit-product, device/qcom/common/vendor/wlan-legacy/qti-wlan-legacy.mk)
 
+# Get Keymaster
+$(call inherit-product, device/qcom/common/vendor/keymaster/qti-keymaster.mk)
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -292,10 +295,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Inherit several Android Go Configurations (Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
 
 # Media
 PRODUCT_COPY_FILES += \
