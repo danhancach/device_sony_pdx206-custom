@@ -41,6 +41,7 @@ $(call inherit-product, device/qcom/common/vendor/gps-legacy/qti-gps-legacy.mk)
 $(call inherit-product, device/qcom/common/system/display/qti-display.mk)
 $(call inherit-product, device/qcom/common/vendor/display/qti-display.mk)
 
+$(call inherit-product, device/qcom/common/vendor/charging/qti-charging.mk)
 $(call inherit-product, device/qcom/common/system/bt/qti-bt.mk)
 $(call inherit-product, device/qcom/common/vendor/bt/qti-bt.mk)
 
@@ -233,10 +234,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health-service.example
 
 # HIDL
 PRODUCT_PACKAGES += \
