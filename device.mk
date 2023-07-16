@@ -21,6 +21,9 @@ $(call inherit-product-if-exists, hardware/sony/configs.mk)
 $(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.mk)
 $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 
+# Get Qseecomd
+$(call inherit-product, device/qcom/common/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk)
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
