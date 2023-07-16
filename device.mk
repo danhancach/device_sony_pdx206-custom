@@ -358,6 +358,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Platform
+TARGET_BOARD_PLATFORM := kona
+TARGET_KERNEL_VERSION := 4.19
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
