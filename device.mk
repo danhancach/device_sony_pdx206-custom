@@ -21,6 +21,10 @@ $(call inherit-product-if-exists, hardware/sony/configs.mk)
 $(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.mk)
 $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 
+# Get qti perf
+$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
+
 # Get Qseecomd
 $(call inherit-product, device/qcom/common/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk)
 
@@ -368,13 +372,7 @@ TARGET_KERNEL_VERSION := 4.19
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.3.vendor \
-
-# Perf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
-
-$(call inherit-product, hardware/sony/perf/qti-perf.mk)
+    android.hardware.power@1.3.vendor
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
