@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
     init.sony-device-common.rc \
     init.sony.rc \
     init.sony-platform.rc \
+    init.aospa.perf.rc \
     init.qcom.legacy.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
