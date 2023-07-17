@@ -5184,7 +5184,6 @@ case "$target" in
 
 	# cpuset parameters
     echo 0-7 > /dev/cpuset/top-app/cpus
-    echo 0-3,5-6 > /dev/cpuset/foreground/cpus
 	echo 0-1 > /dev/cpuset/background/cpus
 	echo 0-3 > /dev/cpuset/system-background/cpus
     echo 0-3 > /dev/cpuset/restricted/cpus

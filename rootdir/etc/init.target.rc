@@ -80,7 +80,6 @@ on init
 
     # ZRAM setup
     write /sys/block/zram0/comp_algorithm lz4
-    write /proc/sys/vm/page-cluster 0
 
 on early-fs
     start vold
@@ -146,7 +145,6 @@ on boot
     chown system system /dev/cpuset/audio-app
     chown system system /dev/cpuset/audio-app/tasks
     chmod 0664 /dev/cpuset/audio-app/tasks
-    write /dev/cpuset/audio-app/cpus 1-2
     write /dev/cpuset/audio-app/mems 0
 
     # Add a cpuset for the camera daemon
