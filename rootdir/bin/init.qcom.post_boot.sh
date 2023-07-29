@@ -5182,27 +5182,6 @@ case "$target" in
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
 
-	# cpuset parameters
-    echo 0-7 > /dev/cpuset/top-app/cpus
-	echo 0-1 > /dev/cpuset/background/cpus
-	echo 0-3 > /dev/cpuset/system-background/cpus
-    echo 0-3 > /dev/cpuset/restricted/cpus
-
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 0 > /dev/stune/foreground/schedtune.boost
-    echo 0 > /dev/stune/schedtune.prefer_idle
-    echo 0 > /dev/stune/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-
-    echo 1000 > /dev/blkio/blkio.weight
-    echo 200 > /dev/blkio/background/blkio.weight
-    echo 2000 > /dev/blkio/blkio.group_idle
-    echo 0 > /dev/blkio/background/blkio.group_idle
-
-	# Turn off scheduler boost at the end
-	echo 0 > /proc/sys/kernel/sched_boost
-
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 	echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
@@ -5221,14 +5200,14 @@ case "$target" in
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-	echo 20000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+	echo 10000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
 	echo 500 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
 	echo 1574400 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-	echo 20000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
+	echo 5000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
 	echo 500 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
         if [ $rev == "2.0" ] || [ $rev == "2.1" ]; then
 		echo 1632000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq

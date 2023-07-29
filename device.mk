@@ -18,8 +18,8 @@ $(call inherit-product, device/qcom/common/vendor/media-legacy/qti-media-legacy.
 $(call inherit-product, device/qcom/common/system/av/qti-av.mk)
 
 # Get qti perf
-$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
-$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
+#$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+#$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
 
 # Get Qseecomd
 $(call inherit-product, device/qcom/common/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk)
@@ -345,9 +345,7 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_KERNEL_VERSION := 4.19
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.power@1.3.vendor
+$(call inherit-product, hardware/sony/power-libperfmgr/power-libperfmgr.mk)
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk

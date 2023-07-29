@@ -63,6 +63,7 @@ import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
 # PA Legacy Devices
 import /vendor/etc/init/hw/init.qcom.legacy.rc
 
@@ -385,9 +386,6 @@ on post-fs-data
 
     mkdir /data/vendor/nfc 0770 nfc nfc
 
-    #Create IOP  deamon related dirs
-    mkdir /data/vendor/iop 0700 root system
-
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
@@ -425,13 +423,6 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     group nfc
     user system
     oneshot
-
-service iop /system/vendor/bin/iop
-    class main
-    user root
-    group root
-    disabled
-    socket iop seqpacket 0666 root system
 
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
