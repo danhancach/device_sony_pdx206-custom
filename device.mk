@@ -30,9 +30,6 @@ $(call inherit-product, device/qcom/common/vendor/wlan-legacy/qti-wlan-legacy.mk
 # Get Keymaster
 $(call inherit-product, device/qcom/common/vendor/keymaster/qti-keymaster.mk)
 
-# Get GPS
-$(call inherit-product, device/qcom/common/vendor/gps-legacy/qti-gps-legacy.mk)
-
 # Get Display
 $(call inherit-product, device/qcom/common/system/display/qti-display.mk)
 $(call inherit-product, device/qcom/common/vendor/display/qti-display.mk)
@@ -78,6 +75,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
@@ -243,6 +241,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor
+
+# GPS Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf
 
 # HIDL
 PRODUCT_PACKAGES += \
