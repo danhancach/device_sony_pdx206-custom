@@ -502,4 +502,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# XperiaParts
+PRODUCT_PACKAGES += \
+    XperiaParts
+
+# Dolby
+$(call inherit-product, hardware/sony/dolby/dolby.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
