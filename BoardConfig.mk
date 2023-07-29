@@ -249,6 +249,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # SELinux
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 include device/sony/pdx206/sepolicy/sepolicy.mk
+include hardware/sony/sepolicy/sepolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 

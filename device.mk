@@ -472,4 +472,11 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd \
     WifiResCommon
 
+# XperiaParts
+PRODUCT_PACKAGES += \
+    XperiaParts
+
+# Dolby
+$(call inherit-product, hardware/sony/dolby/dolby.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
