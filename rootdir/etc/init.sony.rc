@@ -8,6 +8,10 @@ service msim_sh /vendor/bin/init.qcom.msim.sh
     user root
     group root
     oneshot
+on boot
+    # Hide permissive selinux
+    chmod 0640 /sys/fs/selinux/enforce
+    chmod 0440 /sys/fs/selinux/policy
 
 on post-fs
     # radio
