@@ -5,6 +5,7 @@ persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
 # Bluetooth
 persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
 
 # Camera
 camera.disable_zsl_mode=true
