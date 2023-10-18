@@ -136,6 +136,7 @@ persist.vendor.qcom.bluetooth.soc=hastings
 ro.vendor.bluetooth.wipower=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
+bluetooth.device.default_name=Xperia 5 II
 
 # Camera
 vendor.camera.enable.uvc=true
@@ -267,3 +268,5 @@ wifi.aware.interface=wifi-aware0
 # Zygote
 zygote.critical_window.minute=10
 
+# Touch
+ro.vendor.display.low_touch_rate=false
