@@ -18,6 +18,7 @@ BOARD_VENDOR := sony
 
 # Device patch
 DEVICE_PATH := device/sony/pdx206
+CONFIGS_PATH := $(DEVICE_PATH)/configs
 
 # Do not build proprietary capability
 TARGET_USES_AOSP := true
@@ -153,15 +154,15 @@ TARGET_USES_ION := true
 TARGET_SCREEN_DENSITY := 420
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(CONFIGS_PATH)/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
+    $(CONFIGS_PATH)/vintf/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -193,10 +194,10 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(CONFIGS_PATH)/properties/odm.prop
+TARGET_PRODUCT_PROP += $(CONFIGS_PATH)/properties/product.prop
+TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/properties/system.prop
+TARGET_VENDOR_PROP += $(CONFIGS_PATH)/properties/vendor.prop
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
