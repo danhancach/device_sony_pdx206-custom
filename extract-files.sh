@@ -8,6 +8,9 @@
 
 set -e
 
+DEVICE_COMMON=pdx206
+VENDOR=sony
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
@@ -66,8 +69,14 @@ function blob_fixup() {
     product/lib64/libdpmframework.so)
         sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
         ;;
-    vendor/lib64/vendor.somc.camera* | vendor/bin/hw/vendor.somc.hardware.camera.*)
+    vendor/lib64/vendor.somc.camera*)
         "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+        ;;
+    vendor/bin/hw/vendor.somc.hardware.camera.*)
+        "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        "${PATCHELF}" --remove-needed "libbinder.so" "${2}"
+        "${PATCHELF}" --add-needed "libbinder-v32.so" "${2}"
         ;;
     esac
 }
