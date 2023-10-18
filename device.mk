@@ -258,8 +258,6 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
-    libqdMetaData \
     libtinyxml \
     libvulkan \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
