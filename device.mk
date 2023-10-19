@@ -320,9 +320,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libhdr_somc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/libhdr_somc.xml
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+$(call inherit-product, hardware/sony/healthd-ext/healthd-ext.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
