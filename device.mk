@@ -219,6 +219,7 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
+    vendor.sony.charger-service \
     vendor.semc.hardware.charger@1.0.vendor
 
 # Device Init
