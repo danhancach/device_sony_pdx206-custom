@@ -450,7 +450,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.3.vendor
 
 $(call inherit-product, hardware/sony/qti-perf/qti-perf.mk)
 
