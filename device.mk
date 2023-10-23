@@ -31,7 +31,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
 # Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-12288-dalvik-heap.mk)
 
 # Call the BCR setup
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
