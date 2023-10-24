@@ -2108,6 +2108,7 @@ vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/imsrtp.policy
 vendor/etc/seccomp_policy/mediacodec.policy
+vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/etc/ssg/ta_config.json

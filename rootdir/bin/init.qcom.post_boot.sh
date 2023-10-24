@@ -5281,12 +5281,12 @@ case "$target" in
 	echo 0-7     > /dev/cpuset/top-app/cpus
 
     # setup runtime schedTune
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 0 > /dev/stune/foreground/schedtune.boost
-    echo 0 > /dev/stune/schedtune.prefer_idle
-    echo 0 > /dev/stune/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
+    #echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+    #echo 0 > /dev/stune/foreground/schedtune.boost
+    #echo 0 > /dev/stune/schedtune.prefer_idle
+    #echo 0 > /dev/stune/schedtune.boost
+    #echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+    #echo 10 > /dev/stune/top-app/schedtune.boost
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
