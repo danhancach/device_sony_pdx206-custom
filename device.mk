@@ -229,6 +229,11 @@ PRODUCT_PACKAGES += \
     vendor.sony.charger-service \
     vendor.semc.hardware.charger@1.0.vendor
 
+# Config Store
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-service \
+    android.hardware.configstore@1.1-service 
+
 # Device Init
 PRODUCT_PACKAGES += \
     init_thermal.sh \

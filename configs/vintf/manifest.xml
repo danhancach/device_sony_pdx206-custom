@@ -399,4 +399,9 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IComponentStore/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.configstore</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
+    </hal>
 </manifest>
