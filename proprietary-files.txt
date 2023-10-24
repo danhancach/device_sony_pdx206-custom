@@ -1576,6 +1576,10 @@ vendor/lib64/libRbsFlow.so
 vendor/lib64/libets_teeclient_v2.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 
+# GNSS - Import liblocdiagiface from mk3
+vendor/lib/liblocdiagiface.so
+vendor/lib64/liblocdiagiface.so
+
 # GNSS
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
