@@ -2,3 +2,7 @@
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 
+# Enable debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
