@@ -429,6 +429,8 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service \
+    android.hardware.media.omx@1.0-impl \
     init.qti.media.sh \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -438,7 +440,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx.vendor
 
 # Power
 PRODUCT_COPY_FILES += \
