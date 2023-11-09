@@ -27,25 +27,9 @@
     <array name="config_sfps_sensor_props_0" translatable="false">
         <item></item> <!--item>displayId</item-->
         <item>1080</item> <!--item>sensorLocationX</item-->
-        <item>1060</item> <!--item>sensorLocationY</item-->
-        <item>240</item> <!--item>sensorRadius</item-->
+        <item>1080</item> <!--item>sensorLocationY</item-->
+        <item>130</item> <!--item>sensorRadius</item-->
     </array>
-
-    <!-- The default refresh rate for a given device. Change this value to set a higher default
-         refresh rate. If the hardware composer on the device supports display modes with a higher
-         refresh rate than the default value specified here, the framework may use those higher
-         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
-         setFrameRate().
-         If a non-zero value is set for config_defaultPeakRefreshRate, then
-         config_defaultRefreshRate may be set to 0, in which case the value set for
-         config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">0</integer>
-
-    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
-         the framework from using higher refresh rates, even if display modes with higher refresh
-         rates are available from hardware composer. Only has an effect if the value is
-         non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
          vendors to tune the curves to have exact same brightness for different refresh rate. So
@@ -63,7 +47,20 @@
         <item>-1</item>
     </integer-array>
 
-    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
-    <integer name="config_defaultRefreshRateInZone">60</integer>
+    <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
 </resources>

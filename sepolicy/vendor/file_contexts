@@ -16,21 +16,16 @@
 /mnt/idd/output(/.*)?                     u:object_r:idd_output_file:s0
 /mnt/idd/crashdata(/.*)?                  u:object_r:idd_crashdata_file:s0
 /mnt/idd/startup-prober(/.*)?             u:object_r:startupprober_file:s0
-/data/vendor/3dra(/.*)?                   u:object_r:vendor_audio_data_file:s0
-
 
 # HALs
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs   u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service\.sony_edo                   u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.display@(.*)?                         u:object_r:hal_disp_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.camera\.provider@1\.0-service         u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service                   u:object_r:hal_miscta_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.display@(.*)?                         u:object_r:hal_disp_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service                  u:object_r:hal_somc_charger_daemon_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.1-service                     u:object_r:hal_secd_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.system\.idd@1\.0-service                        u:object_r:hal_idd_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service                  u:object_r:hal_somc_charger_daemon_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.somc\.hardware\.camera\.provider@1\.0-service         u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs   u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.sony                              u:object_r:hal_lineage_livedisplay_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.sony                                    u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.nxp    u:object_r:hal_nfc_default_exec:s0
 
 # Devices
 /dev/socket/tad                                           u:object_r:tad_socket:s0
@@ -43,6 +38,9 @@
 # Fingerprint devices
 /dev/esfp0        u:object_r:etsd_device:s0
 
+# Shell scripts
+/(vendor|system/vendor)/bin/init\.qcom\.msim\.sh        u:object_r:init-qcom-msim-sh_exec:s0
+
 # Sony camera devices
 /dev/sony_camera0   u:object_r:sony_camera_device:s0
 /dev/sony_camera1   u:object_r:sony_camera_device:s0
@@ -51,10 +49,7 @@
 /dev/sony_camera4   u:object_r:sony_camera_device:s0
 /dev/camera_sync    u:object_r:hal_camera_sync:s0
 
-# Shell scripts
-/(vendor|system/vendor)/bin/init\.qcom\.msim\.sh        u:object_r:init-qcom-msim-sh_exec:s0
-
-# Sys files
+# Sys
 /sys/devices/virtual/sec/tsp(/.*)?                              u:object_r:sysfs_tsp:s0
 /sys/devices/dsi_panel_driver(/.*)?                             u:object_r:sysfs_dp:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/somc_[a-z0-9_]+       u:object_r:vendor_sysfs_smb_device:s0
@@ -82,4 +77,3 @@
 
 # NFC devices
 /dev/pn553                                                u:object_r:nfc_device:s0
-

@@ -1,17 +1,7 @@
-
-# Copyright (C) 2018 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+# Copyright (C) 2023 Paranoid Android
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 BOARD_VENDOR := sony
@@ -20,13 +10,11 @@ BOARD_VENDOR := sony
 DEVICE_PATH := device/sony/pdx206
 CONFIGS_PATH := $(DEVICE_PATH)/configs
 
-# Do not build proprietary capability
-TARGET_USES_AOSP := true
-
 #Broken Rules
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -55,9 +43,34 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
+# Audio
+AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
+
+AUDIO_FEATURE_ENABLED_AHAL_EXT := false
+AUDIO_FEATURE_ENABLED_DLKM := true
+AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
+AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_SSR := true
+AUDIO_FEATURE_SONY_CIRRUS := true
+USE_CUSTOM_AUDIO_POLICY := 1
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+TARGET_USES_RRO := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := pdx206,XQ-AS72,XQ-AS62,XQ-AS52,XQ-AS42,SO-52A,SOG02,A002SO
+
+# Display
+TARGET_SCREEN_DENSITY := 420
+TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
+TARGET_USES_COLOR_METADATA := true
+TARGET_NO_RAW10_CUSTOM_FORMAT := true
+TARGET_USES_ION := true
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -96,17 +109,14 @@ BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/sony/sm8250
-TARGET_KERNEL_CONFIG := pdx206_defconfig
+TARGET_KERNEL_SOURCE := kernel/msm-4.19
+KERNEL_DEFCONFIG := pdx206_defconfig
 
-# Kernel Clang
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := sdclang
-TARGET_KERNEL_CLANG_VERSION := r487747c
-KERNEL_LD := LD=ld.lld
-TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
-TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
-TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+# Use External DTC
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
+    DTC_OVERLAY_TEST_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/ufdt_apply_overlay \
+    LLVM=1 LLVM_IAS=1
 
 # Platform
 TARGET_BOARD_PLATFORM := kona
@@ -114,83 +124,18 @@ TARGET_BOARD_PLATFORM := kona
 # Qcom
 BOARD_USES_QCOM_HARDWARE := true
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
-# Audio
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
-
-AUDIO_FEATURE_ENABLED_AHAL_EXT := false
-AUDIO_FEATURE_ENABLED_VBAT_MONITOR := true
-AUDIO_FEATURE_ENABLED_RAS := true
-AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
-AUDIO_FEATURE_ENABLED_INCALL_MUSIC := true
-AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
-AUDIO_FEATURE_ENABLED_SPKR_PROTECTION := true
-AUDIO_FEATURE_ENABLED_DEV_ARBI := false
-AUDIO_FEATURE_ENABLED_SOURCE_TRACKING := true
-AUDIO_FEATURE_ENABLED_DLKM := true
-AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
-AUDIO_FEATURE_ENABLED_DTS_EAGLE := false
-AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
-AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
-AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := false
-AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-AUDIO_FEATURE_ENABLED_SSR := true
-AUDIO_FEATURE_ENABLED_FLUENCE := true
-BOARD_SUPPORTS_SOUND_TRIGGER := true
-BOARD_USES_ALSA_AUDIO := true
-AUDIO_FEATURE_SONY_CIRRUS := true
-AUDIO_FEATURE_ENABLED_SND_MONITOR := true
-AUDIO_FEATURE_ENABLED_HDMI_EDID := true
-AUDIO_FEATURE_ENABLED_HDMI_PASSTHROUGH := true
-AUDIO_FEATURE_ENABLED_DISPLAY_PORT := true
-AUDIO_FEATURE_ENABLED_USB_BURST_MODE := true
-USE_CUSTOM_AUDIO_POLICY := 1
-USE_XML_AUDIO_POLICY_CONF := 1
-
-BOARD_SUPPORTS_OPENSOURCE_STHAL := true
-
-# Display
-TARGET_NO_RAW10_CUSTOM_FORMAT := true
-TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
-MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-TARGET_USES_EGL_DISPLAY_ARRAY := true
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-TARGET_HAS_HDR_DISPLAY := true
-TARGET_HAS_WIDE_COLOR_DISPLAY := true
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_USES_COLOR_METADATA := true
-TARGET_USES_DISPLAY_RENDER_INTENTS := true
-TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_GRALLOC4 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
-TARGET_SCREEN_DENSITY := 420
-
-# Filesystem
-TARGET_FS_CONFIG_GEN := $(CONFIGS_PATH)/config.fs
-
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(CONFIGS_PATH)/vintf/framework_compatibility_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/evolution/config/device_framework_matrix.xml
-DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(CONFIGS_PATH)/vintf/device_compatibility_matrix.xml \
+    $(CONFIGS_PATH)/vintf/compatibility_matrix_sony.xml
 
-# Init Script
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pdx206
+DEVICE_MATRIX_FILE += $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += \
+    $(CONFIGS_PATH)/vintf/manifest.xml \
+    $(CONFIGS_PATH)/vintf/manifest_sony.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
-
-# OTA assert
-TARGET_OTA_ASSERT_DEVICE := pdx206|XQ-AS72|XQ-AS62|XQ-AS52|XQ-AS42|SO-52A|SOG02|A002SO
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x06000000
@@ -198,12 +143,6 @@ BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06000000
 # Reserve space for data encryption (109553123000-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 109553106616
-ifneq ($(WITH_GMS),true)
-BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1258291200
-BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1258291200
-endif
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -217,6 +156,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Power
+TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_sony_kona
 
 # Properties
 TARGET_ODM_PROP += $(CONFIGS_PATH)/properties/odm.prop
@@ -234,24 +176,23 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
-# Disable sparse for ext images
-TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
-TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
-# Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-include hardware/sony/sepolicy/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinder-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinder-v32.so
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -262,30 +203,4 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinder-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinder-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
-
-# WiFi
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-CONFIG_ACS := true
-WIFI_DRIVER_DEFAULT := qca_cld3
-CONFIG_IEEE80211AX := true
-WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
-WIFI_DRIVER_STATE_OFF := "OFF"
-WIFI_DRIVER_STATE_ON := "ON"
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# Inherit from the proprietary version
-include vendor/sony/pdx206/BoardConfigVendor.mk
+-include vendor/sony/pdx206/BoardConfigVendor.mk

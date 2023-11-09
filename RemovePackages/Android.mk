@@ -13,8 +13,14 @@ LOCAL_OVERRIDES_PACKAGES := \
     Aperture \
     Chrome \
     Chrome.apk.gz \
+    Chrome64 \
+    Gmail2 \
     Chrome-Stub \
     GoogleCamera \
+    YouTube \
+    Drive \
+    CalculatorGoogle \
+    Maps \
 	Music \
     MusicFX \
     AudioFX \

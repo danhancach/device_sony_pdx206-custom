@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2023 Paranoid Android
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,22 +8,18 @@ service msim_sh /vendor/bin/init.qcom.msim.sh
     user root
     group root
     oneshot
-on boot
-    # Hide permissive selinux
-    chmod 0640 /sys/fs/selinux/enforce
-    chmod 0440 /sys/fs/selinux/policy
 
 on post-fs
     # radio
     exec_start msim_sh
     setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
-    setprop ro.vendor.ltalabel.model ${vendor.radio.ltalabel.model}
 
-on property:ro.vendor.ltalabel.model=XQ-AT42
-    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
-
-on property:ro.vendor.ltalabel.model=XQ-AS42
-    setprop persist.vendor.nfc.config_file_name "libnfc-nxp-typef.conf"
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 243: msm_drm0
+    # IRQ 222: kgsl_3d0_irq
+    write /proc/irq/243/smp_affinity_list 2
+    write /proc/irq/240/smp_affinity_list 1
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x0FCE
@@ -76,17 +72,3 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,diag,adb && pro
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x0FCE
     write /config/usb_gadget/g1/idProduct 0x020D
-
-# Toggle glove_mode according to touch_sensitivity_mode
-on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
-    write /sys/class/sec/tsp/cmd glove_mode,0
-
-on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
-    write /sys/class/sec/tsp/cmd glove_mode,1
-
-# Route touch_sensitivity_mode to persist
-on property:debug.touch_sensitivity_mode=0
-    setprop persist.vendor.touch_sensitivity_mode 0
-
-on property:debug.touch_sensitivity_mode=1
-    setprop persist.vendor.touch_sensitivity_mode 1
